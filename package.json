@@ -1,0 +1,27 @@
+{
+  "name": "react-ui-form",
+  "version": "1.0.0",
+  "description": "The UI Component that providing basic form controls which is compatible with React.js",
+  "main": "index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/weflex/react-ui-form.git"
+  },
+  "keywords": [
+    "react",
+    "form",
+    "ui"
+  ],
+  "dependencies": {
+    "react-binding-component": "1.0.3"
+  },
+  "author": "Yorkie Liu <yorkiefixer@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weflex/react-ui-form/issues"
+  },
+  "homepage": "https://github.com/weflex/react-ui-form#readme"
+}

@@ -2,7 +2,10 @@
 
 import React from 'react';
 import { BindingComponent } from 'react-binding-component';
-import './base.css';
+
+if (process.env.NODE_ENV !== 'test') {
+  require('./base.css');
+}
 
 /**
  * @class UIForm
@@ -192,7 +195,8 @@ class IControl extends BindingComponent {
   get width() {
     let val = 'calc(100% - 5px)';
     if (this.props.flex) {
-      val = 'calc(' + (this.props.flex * 100) + '% - 5px)';
+      let percent = parseInt(this.props.flex * 100);
+      val = 'calc(' + percent + '% - 5px)';
     }
     return val;
   }
@@ -226,14 +230,19 @@ class IControl extends BindingComponent {
    * @return {Object}
    */
   createProps(obj) {
+    obj = obj || {};
     if (this.props.onChange) {
       this.onChangeOnProps = this.props.onChange;
+    }
+    if (obj.onChange) {
+      this.onChangeOnProps = obj.onChange;
+      delete obj.onChange;
     }
     const props = Object.assign({
       type: 'text'
     }, this.props, {
       onChange: this.onInputChange.bind(this),
-    }, obj || {});
+    }, obj);
     props.style = props.style || {};
     if (typeof props.style.width !== 'string') {
       props.style.width = this.width;

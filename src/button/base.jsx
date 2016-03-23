@@ -36,7 +36,6 @@ class UIButton extends IControl {
     button: {
       display: 'inline-block',
       height: '30px',
-      width: 'auto',
       border: '1px solid #9b9b9b',
       borderRadius: '4px',
       padding: '0 10px',
@@ -50,10 +49,6 @@ class UIButton extends IControl {
       borderColor: '#eeeeee',
       color: '#eeeeee',
       cursor: 'no-drop',
-    },
-    block: {
-      width: 'calc(100% - 5px)',
-      display: 'block',
     },
     levels: {
       primary: {
@@ -159,7 +154,11 @@ class UIButton extends IControl {
       style = Object.assign(style, UIButton.styles.levels[level]);
     }
     if (this.props.block) {
-      style = Object.assign(style, UIButton.styles.block);
+      srcProps.flex = 1.0;
+    } else if (!this.props.flex) {
+      style = Object.assign(style, {
+        width: 'auto',
+      });
     }
 
     srcProps.style = style;

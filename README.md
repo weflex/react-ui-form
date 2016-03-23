@@ -2,12 +2,6 @@
 
 The UI Component that providing basic form controls which is compatible with React.js
 
-## Installation
-
-```js
-npm install react-ui-form
-```
-
 ## Get Started
 
 ```jsx
@@ -64,6 +58,28 @@ class ExampleForm extends React.Component {
 - Pickers
   - [`UIOptionPicker`](src/picker/option.jsx)
   - [`UIColorPicker`](src/picker/color.jsx)
+
+
+## Installation
+
+```sh
+$ npm install react-ui-form
+```
+
+## Tests
+
+```sh
+$ npm install
+$ npm test
+```
+
+## Example
+
+```sh
+$ cd examples
+$ npm install && npm start
+$ open ./index.html
+```
 
 ## License
 

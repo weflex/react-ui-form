@@ -1,5 +1,10 @@
 # react-ui-form
 
+[![NPM version][npm-image]][npm-url]
+[![Build status][travis-image]][travis-url]
+[![Dependency Status][david-image]][david-url]
+[![Downloads][downloads-image]][downloads-url]
+
 The UI Component that providing basic form controls which is compatible with React.js
 
 ## Get Started
@@ -85,3 +90,11 @@ $ open ./index.html
 
 MIT @ WeFlex
 
+[npm-image]: https://img.shields.io/npm/v/react-ui-form.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/react-ui-form
+[travis-image]: https://img.shields.io/travis/weflex/react-ui-form.svg?style=flat-square
+[travis-url]: https://travis-ci.org/weflex/react-ui-form
+[david-image]: http://img.shields.io/david/weflex/react-ui-form.svg?style=flat-square
+[david-url]: https://david-dm.org/weflex/react-ui-form
+[downloads-image]: http://img.shields.io/npm/dm/react-ui-form.svg?style=flat-square
+[downloads-url]: https://npmjs.org/package/react-ui-form

@@ -13,6 +13,10 @@
   transition: all .2s ease-in-out;
 }
 
+.ui-form textarea {
+  resize: vertical;
+}
+
 .ui-form input[disabled],
 .ui-form textarea[disabled],
 .ui-form select[disabled],

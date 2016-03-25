@@ -18,12 +18,6 @@ class UIOptionPicker extends IControl {
       {text: '未选择', value: undefined}
     ],
   };
-
-  componentWillMount() {
-    if (this.props.bindStateCtx && !this.bindStateValue) {
-      this.bindStateValue = this.props.options[0].value;
-    }
-  }
   
   componentDidUpdate(prevProps, prevState) {
     const prevOptions = JSON.stringify(prevProps.options);

@@ -18,6 +18,10 @@ class UIOptionPicker extends IControl {
       {text: '未选择', value: undefined}
     ],
   };
+
+  get defaultValue() {
+    return this.props.options[0].value;
+  }
   
   componentDidUpdate(prevProps, prevState) {
     const prevOptions = JSON.stringify(prevProps.options);

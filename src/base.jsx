@@ -209,9 +209,12 @@ class IControl extends BindingComponent {
     this.onChangeOnProps = null;
   }
 
-  componentDidMount() {
+  componentWillMount() {
     if (this.props.bindStateCtx && !this.bindStateValue) {
-      this.bindStateValue = this.props.value || this.props.defaultValue;
+      //TODO(Yorkie): should check if this has defaultValue
+      this.bindStateValue = this.defaultValue || 
+        this.props.value || 
+        this.props.defaultValue;
     }
   }
 

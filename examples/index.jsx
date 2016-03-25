@@ -7,11 +7,17 @@ import {
   UIForm,
   UIRow,
   UIButton,
+  UIDateInput,
+  UITimeInput,
 } from '../src/index.jsx';
 
 class ExampleIndex extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      date: '2015-04-22',
+      time: '12:20',
+    };
   }
   render() {
     return (
@@ -21,6 +27,10 @@ class ExampleIndex extends React.Component {
         </UIRow>
         <UIRow name="block button">
           <UIButton text="block button" block={true} />
+        </UIRow>
+        <UIRow name="date input">
+          <UIDateInput flex={0.5} value={this.state.date} />
+          <UITimeInput flex={0.5} value={this.state.time} />
         </UIRow>
       </UIForm>
     );

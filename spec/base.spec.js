@@ -157,7 +157,7 @@ describe('base component', function() {
       });
     });
 
-    describe('IControl.componentDidMount', function() {
+    describe('IControl.componentWillMount', function() {
       it('should set bindStateValue if value is set', function(next) {
         const ctx = {
           state: {},
@@ -171,7 +171,7 @@ describe('base component', function() {
           bindStateName: 'property',
           value: 'foobar',
         });
-        control.componentDidMount();
+        control.componentWillMount();
       });
     });
   });

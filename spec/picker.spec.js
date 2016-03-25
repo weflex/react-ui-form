@@ -29,6 +29,21 @@ describe('picker components', function() {
         {name: 'foobar', value: 'foobar2'},
       ], next);
     });
+    it('if the option value is 0', function(next) {
+      expectOptionToBeFirst([
+        {name: 'foobar', value: 0},
+      ], next);
+    });
+    it('if the option value is empty string', function(next) {
+      expectOptionToBeFirst([
+        {name: 'foobar', value: ''},
+      ], next);
+    });
+    it('if the option value is null', function(next) {
+      expectOptionToBeFirst([
+        {name: 'foobar', value: null},
+      ], next);
+    });
     it('if the option value is undefined', function(next) {
       expectOptionToBeFirst([
         {name: 'foobar', value: undefined},

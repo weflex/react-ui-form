@@ -212,9 +212,11 @@ class IControl extends BindingComponent {
   componentWillMount() {
     if (this.props.bindStateCtx && !this.bindStateValue) {
       //TODO(Yorkie): should check if this has defaultValue
-      this.bindStateValue = this.defaultValue || 
-        this.props.value || 
-        this.props.defaultValue;
+      if (this.defaultValue === undefined) {
+        this.bindStateValue = this.props.value || this.props.defaultValue;
+      } else {
+        this.bindStateValue = this.defaultValue;
+      }
     }
   }
 
